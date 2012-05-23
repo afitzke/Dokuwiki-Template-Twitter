@@ -65,4 +65,80 @@ function amdy_tpl_searchform($ajax=true,$autocomplete=true){
     print '</div></form>';
     return true;
 }
+
+/**
+* Like the action buttons but links
+*
+* @author Adrian Lang <mail@adrianlang.de>
+* @see    tpl_get_action
+*/
+function btstrp_dropdown_tpl_actionlink($type,$class='',$pre='',$suf='',$inner='',$return=false){
+  global $lang;
+  $data = tpl_get_action($type);
+  if ($data === false) {
+	  return false;
+  } elseif (!is_array($data)) {
+	  $out = sprintf($data, 'link');
+  } else {
+	  extract($data);
+	  if (strpos($id, '#') === 0) {
+		  $linktarget = $id;
+	  } else {
+		  $linktarget = wl($id, $params);
+	  }
+	  $caption = $lang['btn_' . $type];
+	  $akey = $addTitle = '';
+	  if($accesskey){
+		  $akey = 'accesskey="'.$accesskey.'" ';
+		  $addTitle = ' ['.strtoupper($accesskey).']';
+	  }
+	  $out = tpl_link($linktarget, $pre.(($inner)?$inner:$caption).$suf,
+					  'class="action ' . $type .' '.$class.'" ' .
+					  $akey . 'rel="nofollow" ' .
+					  'title="' . hsc($caption).$addTitle . '"', 1);
+	  $out='<a class="btn dropdown-toggle action ' . $type .' '.$class.'" data-toggle="dropdown" href="#">
+									'.$pre.(($inner)?$inner:$caption).$suf.'
+									<span class="caret"></span>
+									</a>';
+  }
+  if ($return) return $out;
+  echo $out;
+  return true;
+}
+
+/**
+* Like the action buttons but links
+*
+* @author Adrian Lang <mail@adrianlang.de>
+* @see    tpl_get_action
+*/
+function btstrp_action_link($type,$class='',$pre='',$suf='',$inner='',$return=false){
+  global $lang;
+  $data = tpl_get_action($type);
+  if ($data === false) {
+	  return false;
+  } elseif (!is_array($data)) {
+	  $out = sprintf($data, 'link');
+  } else {
+	  extract($data);
+	  if (strpos($id, '#') === 0) {
+		  $linktarget = $id;
+	  } else {
+		  $linktarget = wl($id, $params);
+	  }
+	  $caption = $lang['btn_' . $type];
+	  $akey = $addTitle = '';
+	  if($accesskey){
+		  $akey = 'accesskey="'.$accesskey.'" ';
+		  $addTitle = ' ['.strtoupper($accesskey).']';
+	  }
+	  $out = tpl_link($linktarget, $pre.(($inner)?$inner:$caption).$suf,
+					  'class="action ' . $type .' '.$class.'" ' .
+					  $akey . 'rel="nofollow" ' .
+					  'title="' . hsc($caption).$addTitle . '"', 1);
+  }
+  if ($return) return $out;
+  echo $out;
+  return true;
+}
 ?>

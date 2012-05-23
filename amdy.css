@@ -1,7 +1,9 @@
+/**
 body {
     padding-top: 50px;
     padding-bottom: 10px;
 }
+**/
 #dw__search #qsearch__in {
     margin-right: 10px;
 }
@@ -18,3 +20,63 @@ a.wikilink2 {
     color: red;
     text-decoration: underline !important;
 }
+
+@media (min-width: 980px) {
+    #main {
+      padding-top: 60px;
+    }
+  }
+
+/** Clear Edit Buttons in Text **/
+.btn_secedit{
+	width: 100%;
+	text-align: right;
+}
+.btn_secedit  input{
+	border:none;
+	background: none;
+	box-shadow:none;
+	color:#3A87AD;
+	padding-left:0;
+	font-size:0.9em;
+}
+
+/** EDit Text Area **/
+#dw__editform textarea.edit {
+  border: 1px solid #8CACBB;
+  color: #000000;
+  font-family: monospace;
+  font-size: 14px;
+  padding: 0.3em 0 0 0.3em;
+  width: 100%;
+}
+
+/** Sticky Footer **/
+/* styles for layout */
+html,body
+{
+    height:100%;
+}
+
+#wrap
+{
+  min-height: 100%;  
+}
+
+#main
+{
+    overflow:auto;
+    padding-bottom:190px; /* this needs to be bigger than footer height*/
+}
+
+
+#footer 
+{
+    position: relative;
+	margin-top: -152px; /* negative value of footer height */
+	height: 140px;
+	clear:both;
+    padding-top:10px;
+    color:#fff;
+} 
+
