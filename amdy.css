@@ -31,6 +31,7 @@ a.wikilink2 {
 .btn_secedit{
 	width: 100%;
 	text-align: right;
+	margin:0;
 }
 .btn_secedit  input{
 	border:none;
@@ -38,6 +39,7 @@ a.wikilink2 {
 	box-shadow:none;
 	color:#3A87AD;
 	padding-left:0;
+	margin:0;
 	font-size:0.9em;
 }
 
