@@ -82,3 +82,8 @@ html,body
     color:#fff;
 } 
 
+/** Admin **/
+td.label{background-color: #EEEEEE!important; white-space: normal;}
+
+span.outkey{font-size:100%;}
+
