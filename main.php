@@ -91,7 +91,7 @@ $fluid=true;
 									<?php tpl_toc()?>&nbsp;
 								</div>
 									
-								<ul class="span4 pull-right nav nav-tabs">
+								<ul class="pull-right nav nav-tabs">
 									<?php tpl_action('recent', 1, 'li');?>
 									<?php tpl_action('edit', 1, 'li');?>
 								</ul>
