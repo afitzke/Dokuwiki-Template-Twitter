@@ -68,8 +68,6 @@ function amdy_tpl_searchform($ajax=true,$autocomplete=true){
 
 /**
 * Like the action buttons but links
-*
-* @author Adrian Lang <mail@adrianlang.de>
 * @see    tpl_get_action
 */
 function btstrp_dropdown_tpl_actionlink($type,$class='',$pre='',$suf='',$inner='',$return=false){
