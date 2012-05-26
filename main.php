@@ -141,13 +141,15 @@ $fluid=true;
 							<ul class="nav pull-right">
 								<li><?php tpl_action('subscribe',1) ?></li>
 								<li><?php tpl_action('media',1) ?></li>
-								<li><?php tpl_action('admin',1) ?></li>
 								<li><?php tpl_action('profile',1) ?></li>
-								<li><?php tpl_action('login',1) ?></li>
 								<li><?php tpl_action('index',1) ?></li>
 								<li><?php tpl_action('top',1) ?></li>
 							</ul>
 						</div><!-- /.nav-collapse -->
+						<ul class="nav pull-right">
+							<li><?php tpl_action('admin',1) ?></li>
+							<li><?php tpl_action('login',1) ?></li>
+						</ul>
 					</div>
 				</div><!-- /navbar-inner -->
 
